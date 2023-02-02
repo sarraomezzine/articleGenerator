@@ -14,7 +14,7 @@ class OpenAIService
     {
         $complete = $this->open_ai->completion([
             'model' => 'text-davinci-003',
-            'prompt' => $text,
+            'prompt' => 'create an article about'. $text,
             'temperature' => 0.9,
             'max_tokens' => 1000,
             'frequency_penalty' => 0,
@@ -23,4 +23,15 @@ class OpenAIService
         $result = json_decode($complete, true);
         return $result['choices'][0]['text'];
     }
+    public function generateImage($text):string{
+        $complete = $this->open_ai->image([
+            "prompt" => $text,
+            "n" => 1,
+            "size" => "256x256",
+            "response_format" => "url",
+         ]);
+         $result = json_decode($complete, true);
+         return $result['data'][0]['url'];
+    }
+
 }

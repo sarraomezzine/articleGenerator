@@ -33,12 +33,10 @@ class ArticleRepository extends ServiceEntityRepository
         }
     }
 
-    public function openAIDescription(): string
-    {
+    public function openAIDescription(string $text): string
+    {   
         // call open ai
-        $response = $this->openAIService->getMessage("cyber security");
-        //$this->logger->info('I just got the logger');
-        //$this->logger->error($response);    
+        $response = $this->openAIService->getMessage($text);
         return $response;
     }
 
