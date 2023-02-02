@@ -29,6 +29,8 @@ class ArticleController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $aiDescription = $articleRepository->openAIDescription($article->getTitle());
+            $article->setDescription($aiDescription);
             $articleRepository->save($article, true);
 
             return $this->redirectToRoute('app_article_index', [], Response::HTTP_SEE_OTHER);

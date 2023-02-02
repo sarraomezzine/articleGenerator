@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Article;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Service\OpenAIService;
 
 /**
  * @extends ServiceEntityRepository<Article>
@@ -15,9 +16,11 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Article[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class ArticleRepository extends ServiceEntityRepository
-{
-    public function __construct(ManagerRegistry $registry)
+{   
+    private $openAIService;
+    public function __construct(ManagerRegistry $registry, OpenAIService $openAIService)
     {
+        $this->openAIService = $openAIService;
         parent::__construct($registry, Article::class);
     }
 
@@ -28,6 +31,15 @@ class ArticleRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function openAIDescription(): string
+    {
+        // call open ai
+        $response = $this->openAIService->getMessage("cyber security");
+        //$this->logger->info('I just got the logger');
+        //$this->logger->error($response);    
+        return $response;
     }
 
     public function remove(Article $entity, bool $flush = false): void
