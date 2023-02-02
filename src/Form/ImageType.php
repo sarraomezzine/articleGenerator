@@ -13,7 +13,6 @@ class ImageType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('url')
         ;
     }
 

@@ -3,9 +3,11 @@
 {% block title %}Article{% endblock %}
 
 {% block body %}
-    <h1>Generate your article automatically</h1>
+    <div class="container">
+        <h2>Generate your article automatically</h2>
 
-    {{ include('article/_form.html.twig') }}
+        {{ include('article/_form.html.twig') }}
 
-    <a href="{{ path('app_article_index') }}">back to list</a>
+        <a href="{{ path('app_article_index') }}">Check your Articles list </a>
+    </div>  
 {% endblock %}
