@@ -1,5 +1,5 @@
 # articleGenerator
-This project gives you hands to generate automatically articles and images using openAI API. Build with PHP using postgres
+This project gives you hand to generate automatically articles and images using openAI API. Build with PHP using postgres
 
 ## Getting Started
 
@@ -8,9 +8,10 @@ This project cover both, running on a containerized environment using Docker, or
 
 ## Features
 - [X] CRUD endpoints.
-- [x] OpenAI API ([@orhanerday](https://github.com/orhanerday/open-ai)).
-- [x] Database ([postgres](https://www.postgresql.org/)).
-- [x] Docker. (with adminer for database management)
+- [x] OpenAI API ([@orhanerday](https://github.com/orhanerday/open-ai))
+- [x] Database ([postgres](https://www.postgresql.org/))
+- [x] Docker (with adminer for database management)
+- [x] Swagger([NelmioApiDocBundle](https://symfony.com/bundles/NelmioApiDocBundle/current/index.html))
 
 ## Prerequisites
 * Composer (the latest version)
@@ -49,4 +50,7 @@ docker-compose up -d
 
 ` turn off your local postgres server in case of: Error starting userland proxy: listen tcp4 0.0.0.0:5432: bind: address already in use`
 
-
+## Links
+* webApp: http://127.0.0.1:8000/api/article/
+* Swagger: http://127.0.0.1:8000/api/doc
+* Adminer: http://localhost:8080
