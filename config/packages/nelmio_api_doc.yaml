@@ -4,7 +4,7 @@ nelmio_api_doc:
     documentation:
         info:
             title: Article generator 
-            description: This is an awesome app!This project gives you hand to generate automatically articles and images using openAI API
+            description: This project gives you hand to generate automatically articles and images using openAI API
             version: 1.0.0
         components:
             securitySchemes:
