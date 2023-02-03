@@ -1,9 +1,17 @@
 # articleGenerator
-This project gives you hand to generate automatically articles and images using openAI API. Build with PHP using postgres
+This project gives you hand to generate automatically articles and images using openAI API. Build with PHP using postgres and symfony.
+
+` Example of a generated article and image `
+
+<img src="https://cdn.discordapp.com/attachments/1067740542869454911/1071070751802802196/Screen_Shot_2023-02-03_at_3.06.51_PM.png" width="400" height="200"/> 
+
+<img src="https://cdn.discordapp.com/attachments/1067740542869454911/1071071924718931968/Screen_Shot_2023-02-03_at_3.16.36_PM.png" width="400" height="200"/>
+
+
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
+These instructions will get you a copy of the project up and running on your local machine. 
 This project cover both, running on a containerized environment using Docker, or on your local machine.
 
 ## Features
