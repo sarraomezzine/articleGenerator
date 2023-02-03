@@ -3,8 +3,8 @@ nelmio_api_doc:
         path_patterns: [ ^/api ]
     documentation:
         info:
-            title: My App
-            description: This is an awesome app!
+            title: Article generator 
+            description: This project gives you hand to generate automatically articles and images using openAI API
             version: 1.0.0
         components:
             securitySchemes:
